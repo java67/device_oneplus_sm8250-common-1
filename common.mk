@@ -26,7 +26,7 @@ $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_PACKAGES += \
     OnePlusIconShapeCircleOverlay \
@@ -38,12 +38,13 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    $(LOCAL_PATH)/configs/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # A/B
 AB_OTA_UPDATER := true
@@ -94,15 +95,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Camera
+# Prebuilt OOS camera
 PRODUCT_PACKAGES += \
-    Snap
+    OnePlusCamera \
+    OnePlusCameraService \
+    oneplus-framework-res \
+    OnePlusGallery
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/addon.d/51-oneplus-camera.sh:system/addon.d/51-oneplus-camera.sh  \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml
 
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+# Evolution Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
 
 # Display
 PRODUCT_PACKAGES += \
@@ -179,6 +191,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.powershare@1.0-service.oneplus_kona
 
+# Prebuilts
+PRODUCT_PACKAGES += \
+    PixelLauncher
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
@@ -211,11 +227,6 @@ PRODUCT_COPY_FILES += \
 # Touch
 PRODUCT_PACKAGES += \
     lineage.touch@1.0-service.oneplus_kona
-
-# tri-state-key
-PRODUCT_PACKAGES += \
-    KeyHandler \
-    tri-state-key_daemon
 
 # Trust HAL
 PRODUCT_PACKAGES += \
