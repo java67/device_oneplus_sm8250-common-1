@@ -107,6 +107,7 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    init.opcamera.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
@@ -190,10 +191,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.powershare@1.0-service.oneplus_kona
 
-# Prebuilts
-PRODUCT_PACKAGES += \
-    PixelLauncher
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
@@ -226,6 +223,10 @@ PRODUCT_COPY_FILES += \
 # Touch
 PRODUCT_PACKAGES += \
     lineage.touch@1.0-service.oneplus_kona
+
+# tri-state key
+PRODUCT_PACKAGES += \
+    tri-state-key_daemon
 
 # Trust HAL
 PRODUCT_PACKAGES += \
