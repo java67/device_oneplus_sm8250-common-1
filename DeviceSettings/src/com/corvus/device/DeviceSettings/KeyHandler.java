@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import android.Manifest;
 import android.app.ActivityThread;
@@ -49,9 +49,9 @@ import android.widget.Toast;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import com.evolution.device.DeviceSettings.Constants;
-import com.evolution.device.DeviceSettings.DeviceSettings;
-import com.evolution.device.DeviceSettings.R;
+import com.corvus.device.DeviceSettings.Constants;
+import com.corvus.device.DeviceSettings.DeviceSettings;
+import com.corvus.device.DeviceSettings.R;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -193,7 +193,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private Context getResContext(Context context) {
         Context resContext;
         try {
-            resContext = context.createPackageContext("com.evolution.device.DeviceSettings",
+            resContext = context.createPackageContext("com.corvus.device.DeviceSettings",
                     Context.CONTEXT_IGNORE_SECURITY | Context.CONTEXT_INCLUDE_CODE);
         } catch (NameNotFoundException e) {
             // nothing to do about this, shouldn't ever reach here anyway

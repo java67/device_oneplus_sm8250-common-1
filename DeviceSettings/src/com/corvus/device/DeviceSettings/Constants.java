@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +32,7 @@ import android.media.AudioManager;
 public class Constants {
 
     // Broadcast action for settings update
-    static final String UPDATE_PREFS_ACTION = "com.evolution.device.DeviceSettings.UPDATE_SETTINGS";
+    static final String UPDATE_PREFS_ACTION = "com.corvus.device.DeviceSettings.UPDATE_SETTINGS";
 
     // Preference keys
     public static final String NOTIF_SLIDER_TOP_KEY = "keycode_top_position";
@@ -75,7 +75,7 @@ public class Constants {
     static final String UPDATE_EXTRA_ACTION_MAPPING = "action_mappings";
 
     public static final String ACTION_UPDATE_SLIDER_POSITION
-            = "com.evolution.device.DeviceSettings.UPDATE_SLIDER_POSITION";
+            = "com.corvus.device.DeviceSettings.UPDATE_SLIDER_POSITION";
     public static final String EXTRA_SLIDER_POSITION = "position";
 
     static {

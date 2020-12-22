@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -43,8 +43,8 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.util.evolution.FileUtils;
-import com.evolution.device.DeviceSettings.Constants;
+import com.android.internal.util.corvus.FileUtils;
+import com.corvus.device.DeviceSettings.Constants;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {

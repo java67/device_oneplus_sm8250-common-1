@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -24,7 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import com.evolution.device.DeviceSettings.HBMModeSwitch;
+import com.corvus.device.DeviceSettings.HBMModeSwitch;
 
 public class HBMModeService extends Service {
 

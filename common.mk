@@ -26,7 +26,7 @@ $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-evolution
+    $(LOCAL_PATH)/overlay-corvus
 
 PRODUCT_PACKAGES += \
     OnePlusIconShapeCircleOverlay \
@@ -112,7 +112,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
-# Evolution Device Settings
+# Corvus Device Settings
 PRODUCT_PACKAGES += \
     DeviceSettings
 

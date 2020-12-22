@@ -15,12 +15,12 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import android.content.Context;
 import android.provider.Settings;
 
-import com.evolution.device.DeviceSettings.DeviceSettings;
+import com.corvus.device.DeviceSettings.DeviceSettings;
 
 public class AutoRefreshRateSwitch {
 

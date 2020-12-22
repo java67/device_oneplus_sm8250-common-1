@@ -32,8 +32,8 @@
             android:summary="@string/panel_category_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.evolution.device.DeviceSettings"
-                    android:targetClass="com.evolution.device.DeviceSettings.PanelSettingsActivity" />
+                    android:targetPackage="com.corvus.device.DeviceSettings"
+                    android:targetClass="com.corvus.device.DeviceSettings.PanelSettingsActivity" />
         </Preference>
     </PreferenceCategory>
 
@@ -132,7 +132,7 @@
         android:key="vibrator"
         android:title="@string/category_vibrator">
 
-        <com.evolution.device.DeviceSettings.VibratorStrengthPreference
+        <com.corvus.device.DeviceSettings.VibratorStrengthPreference
             android:key="vib_strength"
             android:title="@string/vib_strength_title_head"
             android:summary="@string/vib_strength_summary_head" />
