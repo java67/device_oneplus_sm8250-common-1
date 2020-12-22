@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.evolution.device.DeviceSettings;
+package com.sakura.device.DeviceSettings;
 
 import android.content.res.Resources;
 import android.util.Log;
@@ -118,7 +118,7 @@ public class Utils {
     public static String getStringForResourceName(final Resources res,
                                                   final String resourceName,
                                                   final String defaultValue) {
-        final int resId = res.getIdentifier(resourceName, "string", "com.evolution.device.DeviceSettings");
+        final int resId = res.getIdentifier(resourceName, "string", "com.sakura.device.DeviceSettings");
         if (resId <= 0) {
             Log.e(TAG, "No resource found for " + resourceName);
             return defaultValue;

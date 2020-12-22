@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.sakura.device.DeviceSettings;
 
 import android.app.ActivityManager;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import android.os.Handler;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
-import com.evolution.device.DeviceSettings.R;
+import com.sakura.device.DeviceSettings.R;
 
 // TODO: Add FPS drawables
 public class FPSTileService extends TileService {

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.sakura.device.DeviceSettings;
 
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.corvus.device.DeviceSettings;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -37,10 +37,10 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.evolution.hardware.LineageHardwareManager; // Need FWB support
-import com.android.internal.evolution.hardware.TouchscreenGesture; // Need FWB support
+import com.android.internal.sakura.hardware.LineageHardwareManager; // Need FWB support
+import com.android.internal.sakura.hardware.TouchscreenGesture; // Need FWB support
 
-import com.evolution.device.DeviceSettings.R;
+import com.sakura.device.DeviceSettings.R;
 
 import java.lang.System;
 

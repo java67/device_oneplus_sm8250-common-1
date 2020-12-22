@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.evolution.device.DeviceSettings;
+package com.sakura.device.DeviceSettings;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

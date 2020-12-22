@@ -15,26 +15,20 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.evolution.device.DeviceSettings;
+package com.sakura.device.DeviceSettings;
 
 import android.content.Context;
+import android.provider.Settings;
 
-public class HBMModeSwitch {
+import com.sakura.device.DeviceSettings.DeviceSettings;
 
-    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
+public class AutoRefreshRateSwitch {
 
-    public static String getFile() {
-        if (Utils.fileWritable(FILE)) {
-            return FILE;
-        }
-        return null;
-    }
+    public static final String SETTINGS_KEY = DeviceSettings.KEY_SETTINGS_PREFIX + DeviceSettings.KEY_AUTO_REFRESH_RATE;
 
-    public static boolean isSupported() {
-        return Utils.fileWritable(getFile());
-    }
+    public AutoRefreshRateSwitch() { }
 
     public static boolean isCurrentlyEnabled(Context context) {
-        return Utils.getFileValueAsBoolean(getFile(), false);
+        return Settings.System.getInt(context.getContentResolver(), SETTINGS_KEY, 1) == 1;
     }
 }
