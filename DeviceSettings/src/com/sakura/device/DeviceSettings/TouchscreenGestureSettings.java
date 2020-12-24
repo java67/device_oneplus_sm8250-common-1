@@ -37,8 +37,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.sakura.hardware.LineageHardwareManager; // Need FWB support
-import com.android.internal.sakura.hardware.TouchscreenGesture; // Need FWB support
+import com.android.internal.lineage.hardware.LineageHardwareManager; // Need FWB support
+import com.android.internal.lineage.hardware.TouchscreenGesture; // Need FWB support
 
 import com.sakura.device.DeviceSettings.R;
 

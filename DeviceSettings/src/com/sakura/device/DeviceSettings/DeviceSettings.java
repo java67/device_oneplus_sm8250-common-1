@@ -43,7 +43,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.util.sakura.FileUtils;
+import com.android.internal.util.lineage.FileUtils;
 import com.sakura.device.DeviceSettings.Constants;
 
 public class DeviceSettings extends PreferenceFragment
@@ -136,7 +136,7 @@ public class DeviceSettings extends PreferenceFragment
         if (preference == mFpsInfo) {
             boolean enabled = (Boolean) newValue;
             Intent fpsinfo = new Intent(this.getContext(),
-                    com.evolution.device.DeviceSettings.FPSInfoService.class);
+                    com.sakura.device.DeviceSettings.FPSInfoService.class);
             if (enabled) {
                 this.getContext().startService(fpsinfo);
             } else {
@@ -158,7 +158,7 @@ public class DeviceSettings extends PreferenceFragment
             Boolean enabled = (Boolean) newValue;
             Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
             Intent hbmIntent = new Intent(this.getContext(),
-                    com.evolution.device.DeviceSettings.HBMModeService.class);
+                    com.sakura.device.DeviceSettings.HBMModeService.class);
             if (enabled) {
                 this.getContext().startService(hbmIntent);
             } else {

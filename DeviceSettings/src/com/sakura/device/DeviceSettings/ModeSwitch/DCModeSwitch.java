@@ -23,7 +23,7 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import com.corvus.device.DeviceSettings.DeviceSettings;
+import com.sakura.device.DeviceSettings.DeviceSettings;
 
 public class DCModeSwitch implements OnPreferenceChangeListener {
 

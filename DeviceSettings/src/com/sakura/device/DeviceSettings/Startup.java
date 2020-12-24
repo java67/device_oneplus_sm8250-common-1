@@ -25,7 +25,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceManager;
 
-import com.sakura.device.DeviceSettings.TouchscreenGestureSettings;
+import com.lineage.device.DeviceSettings.TouchscreenGestureSettings;
 
 public class Startup extends BroadcastReceiver {
 
